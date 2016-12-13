@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    
+    title Black and White
+    
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    link(rel='shortcut icon', href='assets/img/favicon.ico')
+    
+    //twitter bootstrap form bower_components
+    link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+    
+
+    // custom css style
+    link(rel='stylesheet', href='build/css/main.min.css')
+    
+    
+    body
+      //- include includes/preloader.jade
+      include includes/preloader.jade
+      #page
+        include includes/header.jade
+        include includes/footer.jade
+        #fullpage
+          include includes/section-welcome.jade
+          include includes/section-blueline.jade
+          include includes/section-coffmeet.jade
+          include includes/section-littera.jade
+          include includes/section-beers.jade
+          include includes/section-whatwedo.jade
+          include includes/section-whoweare.jade
+          include includes/section-getintouch.jade
+          
+
+        // include javascript
+        script(src='build/js/main.min.js')
+        script(type='text/javascript').
+         $(window).on("load",function(){
+         $('.preloader').delay(2000).fadeOut("slow");
+         $('#page').delay(2000).css({'display':'block' , 'overflow':'scroll'});
+         });
+        

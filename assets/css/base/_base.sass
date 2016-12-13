@@ -1,0 +1,97 @@
+*
+  box-sizing: border-box
+
+#page
+  display: none
+  overflow:hidden
+
+body,
+html
+  background:
+    color: #fff
+  font-size: 14px
+  line-height: 1.6
+  font-family: 'Lato', sans-serif
+  color: $black
+  overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
+
+  ul,ol,li, a
+    list-style: none
+    text-decoration: none
+    margin: 0
+    padding: 0
+
+    &:hover,
+    &:focus,
+    &:visited
+      text-decoration: none
+
+  .hoverOverlay
+    position: relative
+    height: 100%
+    width: 100%
+    transition: all .9s ease
+
+    &.js-hover
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: $pink
+
+    .animatedDevice
+      animation: soarDevice 2.5s infinite linear alternate
+
+    .description
+      text-align: center
+      margin-top: 30px
+
+      h2,
+      p
+        color: $pink
+        line-height: 1.5em
+
+      .icon-arrow-right
+        width: 20px
+        margin: 0 auto
+        padding-top: 10px
+
+        #arrow-right-svg
+          .path
+            fill: $pink
+
+
+  #header,
+  #footer
+    position: fixed
+    width: 100%
+    margin: 0 auto
+    z-index: 999
+    transition: all .8s ease-in-out
+
+  .wrapper
+    padding-top: 84px
+  .wrapper75
+    padding-top: 75px
+
+  @keyframes soarDevice
+    0%
+      transform: translateY(-10px)
+    100%
+      transform: translateY(20px)
+
+
+  @media only screen and (min-width: $mdScreen)
+    .wrapper
+      position: relative
+      top: 50%
+      top: calc(25% - 50px)
+
+      .description
+        text-align: center
+        margin: 10%
+
+      .icon-arrow-right
+        width: 30px

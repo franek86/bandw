@@ -1,0 +1,54 @@
+.section.welcome
+  position: relative
+  background:
+    image: url('../img/welcome-bg.jpg')
+    repeat: no-repeat
+    size: cover
+    position: top left
+  text-align: center
+
+  .welcome-text
+    position: absolute
+    top: 40%
+    left: 50%
+    width: 320px
+    margin-left: -160px
+    padding: 0 1em
+
+    h1
+      span
+        color: $pink
+
+    h4
+      margin-top: 1.2em
+
+
+  .welcome-icon-down
+    position: absolute
+    bottom: 15%
+    left: 50%
+    margin-left: -15px
+
+    .arrow-down
+       width: 30px
+       height: 30px
+       opacity: 0
+       animation: movingArrow 1.5s  ease-in-out infinite
+
+
+
+  @keyframes movingArrow
+      0%
+        transform: translateY(0)
+
+      50%
+          opacity: .3
+
+      100%
+        transform: translateY(100%)
+        opacity: .8
+
+  @media only screen and (min-width: $mdScreen)
+    .welcome-text
+      min-width: 620px
+      margin-left: -310px

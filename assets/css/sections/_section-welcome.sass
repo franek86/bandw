@@ -1,10 +1,10 @@
 .section.welcome
   position: relative
   background:
-    image: url('../img/welcome-bg.jpg')
+    image: url('../img/header_bg.jpg')
     repeat: no-repeat
     size: cover
-    position: top left
+    position: center
   text-align: center
 
   .welcome-text
@@ -17,7 +17,7 @@
 
     h1
       span
-        color: $pink
+        color: $black
 
     h4
       margin-top: 1.2em
@@ -30,8 +30,8 @@
     margin-left: -15px
 
     .arrow-down
-       width: 30px
-       height: 30px
+       width: 49px
+       height: 49px
        opacity: 0
        animation: movingArrow 1.5s  ease-in-out infinite
 
@@ -50,5 +50,5 @@
 
   @media only screen and (min-width: $mdScreen)
     .welcome-text
-      min-width: 620px
-      margin-left: -310px
+      width: 500px
+      margin-left: -250px

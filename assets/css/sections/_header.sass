@@ -1,8 +1,6 @@
 #header
-  background:
-    color: $white
-  padding: 10px 0
-
+  padding: 8px 0
+  background-color: transparentize(#d07599, 0.2)
 
   &.shrink
     padding-top: 20px
@@ -45,6 +43,9 @@
         transform: translateX(20px)
 
     .navbar-brand
+      padding-top: 10px
+      padding-bottom: 10px
+
       >img
         width: 60%
 
@@ -57,7 +58,12 @@
       margin-top: 30px
 
       >li
-        >a,
+        a:hover
+          background-color: $white
+          border-radius: 15px
+          color: $purple
+
+
         .dropdown-link
           display: inline-block
           line-height: 15px
@@ -68,10 +74,11 @@
             size: 1.5em
           cursor: pointer
 
+
           &:after
             display: block
             content: ''
-            border-bottom: 4px solid $pink
+            border: 2px solid $pink
             transform: scaleX(0)
             transform-origin:  0% 50%
             transition: transform .7s ease-in-out
@@ -83,6 +90,7 @@
         .work-dropdown-menu
           padding:  10px
           background: $white
+          border-radius: 10px
 
           .dropdown-link
             display: inline-block
@@ -102,7 +110,7 @@
               size: 1.15em
               weight: 700
             text-transform: uppercase
-            line-height: 40px
+
 
           &:hover .work-dropdown-menu
             transform: translateY(0px)
@@ -125,4 +133,6 @@
         >li
           >a
             font:
-              size: 1.4em
+              size: 1.14em
+              weight: bold
+            color: $white

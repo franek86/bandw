@@ -5,10 +5,9 @@
   display: none
   overflow:hidden
 
+
 body,
 html
-  background:
-    color: #fff
   font-size: 14px
   line-height: 1.6
   font-family: 'Lato', sans-serif
@@ -17,6 +16,11 @@ html
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
 
+  .navbar-default .navbar-nav>li>a
+    color: $white
+
+  .gradient
+    background-image: linear-gradient(180deg, #E8C5CC 0%, #ffffff 100%)
 
   ul,ol,li, a
     list-style: none
@@ -28,6 +32,9 @@ html
     &:focus,
     &:visited
       text-decoration: none
+
+  .sm-devices-img
+    padding: 2em 4em 0 4em
 
   .hoverOverlay
     position: relative
@@ -45,22 +52,19 @@ html
       animation: soarDevice 2.5s infinite linear alternate
 
     .description
+      max-height: 320px
       text-align: center
-      margin-top: 30px
+      padding: 0 10%
 
       h2,
       p
-        color: $pink
-        line-height: 1.5em
+        color: $purple
+        line-height: 1.8em
 
       .icon-arrow-right
-        width: 20px
-        margin: 0 auto
-        padding-top: 10px
-
-        #arrow-right-svg
-          .path
-            fill: $pink
+        img
+          width: 10px
+          margin: 0 auto
 
 
   #header,
@@ -72,26 +76,34 @@ html
     transition: all .8s ease-in-out
 
   .wrapper
-    padding-top: 84px
-  .wrapper75
-    padding-top: 75px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: space-between
+
+  .wrapper-pd-top
+    padding-top: 100px
+
 
   @keyframes soarDevice
     0%
       transform: translateY(-10px)
     100%
-      transform: translateY(20px)
+      transform: translateY(10px)
 
 
   @media only screen and (min-width: $mdScreen)
-    .wrapper
-      position: relative
-      top: 50%
-      top: calc(25% - 50px)
+    .wrapper-pd-top
+      padding-top: 120px
 
-      .description
-        text-align: center
-        margin: 10%
+    .description
+      height: 320px
+      transform: translateY(50%)
+      padding-left: 20px
+      text-align: center
 
-      .icon-arrow-right
-        width: 30px
+    .icon-arrow-right
+      img
+        width: 40px
+        padding-top: 30px

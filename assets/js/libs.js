@@ -49,14 +49,14 @@ function jsHoverOverlay(){
       $(this).css('color', '#fff');
     });
     // replace image
-    $replaceImage.css('fill', '#fff');
+    $replaceImage.css('fill', '#725555');
   }).on('mouseleave', function(){
     $(this).removeClass('js-hover');
     $([$h2, $p]).each(function(){
-      $(this).css('color', '#e6afa1');
+      $(this).css('color', '#725555');
     });
     // replace image
-    $replaceImage.css('fill', '#e6afa1');
+    $replaceImage.css('fill', '#fff');
   });
 
 }
